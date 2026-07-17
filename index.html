@@ -140,6 +140,29 @@
             transition: all 0.3s;
         }
 
+        /* ===== Language Toggle ===== */
+        .lang-toggle {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 700;
+            transition: all 0.3s;
+            margin-left: 20px;
+        }
+
+        .lang-toggle:hover {
+            background: var(--primary);
+            color: #000;
+        }
+
+        .en { display: none; }
+        body.lang-en .en { display: inline; }
+        body.lang-en .zh { display: none; }
+
         /* ===== Hero Section ===== */
         .hero {
             min-height: 100vh;
@@ -752,11 +775,12 @@
     <div class="nav-container">
         <a href="#hero" class="nav-logo">DJ AK</a>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#about">关于</a></li>
-            <li><a href="#experience">经历</a></li>
-            <li><a href="#skills">技能</a></li>
-            <li><a href="#contact">联系</a></li>
+            <li><a href="#about"><span class="zh">关于</span><span class="en">About</span></a></li>
+            <li><a href="#experience"><span class="zh">经历</span><span class="en">Experience</span></a></li>
+            <li><a href="#skills"><span class="zh">技能</span><span class="en">Skills</span></a></li>
+            <li><a href="#contact"><span class="zh">联系</span><span class="en">Contact</span></a></li>
         </ul>
+        <button class="lang-toggle" id="langToggle" aria-label="切换语言">EN/中</button>
         <div class="hamburger" id="hamburger" aria-label="菜单" role="button" tabindex="0">
             <span></span>
             <span></span>
@@ -768,13 +792,13 @@
 <!-- Hero Section -->
 <section class="hero" id="hero">
     <div class="hero-content">
-        <div class="hero-badge">老挝万象 · TG CLUB</div>
+        <div class="hero-badge"><span class="zh">老挝万象 · TG CLUB</span><span class="en">Vientiane, Laos · TG CLUB</span></div>
         <h1><span class="gradient-text">DJ AK</span></h1>
-        <div class="subtitle-cn">DJ富贵</div>
-        <div class="subtitle-role">TG CLUB · DJ / 部门管理</div>
-        <p>2018年云南出道，深耕电子音乐领域8年。从营销新人到DJ主管，凭借热爱与天赋一路成长。现负责老挝万象TG CLUB包厢DJ部门业绩整理与财务对接工作。</p>
+        <div class="subtitle-cn"><span class="zh">DJ富贵</span><span class="en">DJ Fugui</span></div>
+        <div class="subtitle-role">TG CLUB · <span class="zh">DJ / 部门管理</span><span class="en">DJ / Dept. Management</span></div>
+        <p><span class="zh">2018年云南出道，深耕电子音乐领域8年。从营销新人到DJ主管，凭借热爱与天赋一路成长。现负责老挝万象TG CLUB包厢DJ部门业绩整理与财务对接工作。</span><span class="en">Debuted in Yunnan in 2018, with 8+ years in electronic music. Grew from a marketing rookie to DJ Supervisor. Currently managing party room DJ department performance reports and finance coordination at TG CLUB, Vientiane, Laos.</span></p>
         <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">联系我</a>
+            <a href="#contact" class="btn btn-primary"><span class="zh">联系我</span><span class="en">Contact Me</span></a>
             <a href="https://x.com/MrAkA2002" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Twitter / X</a>
             <a href="https://wa.me/8562092669039" target="_blank" rel="noopener noreferrer" class="btn btn-outline">WhatsApp</a>
         </div>
@@ -787,8 +811,8 @@
 <!-- About Section -->
 <section id="about">
     <div class="container">
-        <h2 class="section-title fade-in"><span class="gradient-text">关于AK（Mr.AK）</span></h2>
-        <p class="section-subtitle fade-in">About AK</p>
+        <h2 class="section-title fade-in"><span class="gradient-text"><span class="zh">关于AK（Mr.AK）</span><span class="en">About AK (Mr.AK)</span></span></h2>
+        <p class="section-subtitle fade-in"><span class="zh">About AK</span><span class="en">About AK</span></p>
         <div class="about-grid">
             <div class="about-image fade-in">
                 <div class="image-frame">
@@ -796,41 +820,41 @@
                 </div>
                 <div class="photo-gallery">
                     <div class="gallery-item">
-                        <img src="images/photo1.jpg" alt="DJ AK - 黑发造型" onerror="this.parentElement.style.display='none'">
+                        <img src="images/photo1.jpg" alt="DJ AK" onerror="this.parentElement.style.display='none'">
                     </div>
                     <div class="gallery-item">
-                        <img src="images/photo2.jpg" alt="DJ AK - 金发造型" onerror="this.parentElement.style.display='none'">
+                        <img src="images/photo2.jpg" alt="DJ AK" onerror="this.parentElement.style.display='none'">
                     </div>
                 </div>
             </div>
             <div class="about-text fade-in">
-                <h3>DJ AK（DJ富贵）</h3>
-                <p>2018年于云南出道，中国夜场行业正处于巅峰转向下行的转折期。凭借对电子音乐的热爱与极强的学习能力，他从一名营销岗位的新人逐步成长为独当一面的DJ。因其涉猎广泛、技能全面，曾被同事称为"万能小王子"。</p>
-                <p>现任职于老挝万象TG CLUB，负责包厢DJ部门业绩整理与财务对接工作。TG CLUB是老挝万象最具代表性的电音娱乐场所之一，以5D全屏科技和顶级音响设备著称。</p>
+                <h3>DJ AK（<span class="zh">DJ富贵</span><span class="en">DJ Fugui</span>）</h3>
+                <p><span class="zh">2018年于云南出道，中国夜场行业正处于巅峰转向下行的转折期。凭借对电子音乐的热爱与极强的学习能力，他从一名营销岗位的新人逐步成长为独当一面的DJ。因其涉猎广泛、技能全面，曾被同事称为"万能小王子"。</span><span class="en">Debuted in Yunnan in 2018, during the transition of China's nightclub industry from its peak to a downturn. With a passion for electronic music and exceptional learning ability, he grew from a marketing newcomer to a versatile DJ. Known among colleagues as the "All-Round Prince" due to his diverse skills.</span></p>
+                <p><span class="zh">现任职于老挝万象TG CLUB，负责包厢DJ部门业绩整理与财务对接工作。TG CLUB是老挝万象最具代表性的电音娱乐场所之一，以5D全屏科技和顶级音响设备著称。</span><span class="en">Currently working at TG CLUB in Vientiane, Laos, managing party room DJ department performance reports and finance coordination. TG CLUB is one of Vientiane's most iconic electronic music venues, known for its 5D full-screen technology and top-tier sound systems.</span></p>
                 <div class="about-info">
                     <div class="about-info-item">
-                        <span class="label">姓名：</span>
-                        <span class="value">DJ AK（DJ富贵）</span>
+                        <span class="label"><span class="zh">姓名：</span><span class="en">Name:</span></span>
+                        <span class="value">DJ AK（<span class="zh">DJ富贵</span><span class="en">DJ Fugui</span>）</span>
                     </div>
                     <div class="about-info-item">
-                        <span class="label">职位：</span>
-                        <span class="value">DJ / 部门管理</span>
+                        <span class="label"><span class="zh">职位：</span><span class="en">Position:</span></span>
+                        <span class="value">DJ / <span class="zh">部门管理</span><span class="en">Dept. Management</span></span>
                     </div>
                     <div class="about-info-item">
-                        <span class="label">所在地：</span>
-                        <span class="value">老挝万象</span>
+                        <span class="label"><span class="zh">所在地：</span><span class="en">Location:</span></span>
+                        <span class="value"><span class="zh">老挝万象</span><span class="en">Vientiane, Laos</span></span>
                     </div>
                     <div class="about-info-item">
-                        <span class="label">机构：</span>
+                        <span class="label"><span class="zh">机构：</span><span class="en">Venue:</span></span>
                         <span class="value">TG CLUB</span>
                     </div>
                     <div class="about-info-item">
-                        <span class="label">出道：</span>
-                        <span class="value">2018年 · 云南</span>
+                        <span class="label"><span class="zh">出道：</span><span class="en">Debut:</span></span>
+                        <span class="value">2018 · <span class="zh">云南</span><span class="en">Yunnan</span></span>
                     </div>
                     <div class="about-info-item">
-                        <span class="label">经验：</span>
-                        <span class="value">8年+</span>
+                        <span class="label"><span class="zh">经验：</span><span class="en">Experience:</span></span>
+                        <span class="value">8+ <span class="zh">年</span><span class="en">Years</span></span>
                     </div>
                 </div>
             </div>
@@ -848,9 +872,9 @@
             <div class="timeline-item fade-in">
                 <div class="timeline-content">
                     <div class="timeline-date">2017 — 2018</div>
-                    <h4>DJ学徒</h4>
+                    <h4><span class="zh">DJ学徒</span><span class="en">DJ Apprentice</span></h4>
                     <div class="company">云南昭通 · Space Club</div>
-                    <p>初入行业，从营销岗位起步。机缘巧合接触DJ职业后拜师学艺，跟随现场DJ系统学习半年，正式出道。凭借对电子音乐的理解力与天赋，迅速成长。</p>
+                    <p><span class="zh">初入行业，从营销岗位起步。机缘巧合接触DJ职业后拜师学艺，跟随现场DJ系统学习半年，正式出道。凭借对电子音乐的理解力与天赋，迅速成长。</span><span class="en">Started in the industry from a marketing position. Discovered DJing by chance, apprenticed under a live DJ for 6 months before debuting. Grew rapidly with strong musical intuition and talent.</span></p>
                 </div>
             </div>
             <!-- 2020 江苏 -->
@@ -859,7 +883,7 @@
                     <div class="timeline-date">2020</div>
                     <h4>DJ</h4>
                     <div class="company">江苏常熟 · ET CLUB</div>
-                    <p>赴江苏就职，因经营方问题导致店铺关闭，正常离职。</p>
+                    <p><span class="zh">赴江苏就职，因经营方问题导致店铺关闭，正常离职。</span><span class="en">Moved to Jiangsu for work. Left normally after the venue closed due to management issues.</span></p>
                 </div>
             </div>
             <!-- 2021-2024 福州 -->
@@ -868,16 +892,16 @@
                     <div class="timeline-date">2021 — 2024</div>
                     <h4>DJ</h4>
                     <div class="company">福州长乐 · Spades</div>
-                    <p>职业生涯中最重要的阶段。来来回回三次，见证了店铺三次更名。期间曾短暂赴浙江宁波慈溪杭州湾担任筹备店音乐主管（2022），以及广西贺州V8就职半年（2023），最终均回归Spades。后因老板经营原因关门，正常离职。</p>
+                    <p><span class="zh">职业生涯中最重要的阶段。来来回回三次，见证了店铺三次更名。期间曾短暂赴浙江宁波慈溪杭州湾担任筹备店音乐主管（2022），以及广西贺州V8就职半年（2023），最终均回归Spades。后因老板经营原因关门，正常离职。</span><span class="en">The most significant phase of his career. Returned three times, witnessing three rebrands. Briefly served as Music Supervisor at a new venue in Ningbo, Zhejiang (2022) and worked at V8 in Hezhou, Guangxi for 6 months (2023). Eventually left after the venue closed due to ownership issues.</span></p>
                 </div>
             </div>
             <!-- 2024至今 TG CLUB -->
             <div class="timeline-item fade-in">
                 <div class="timeline-content">
-                    <div class="timeline-date">2024.10 — 至今</div>
-                    <h4>DJ / 部门管理</h4>
+                    <div class="timeline-date">2024.10 — <span class="zh">至今</span><span class="en">Present</span></div>
+                    <h4>DJ / <span class="zh">部门管理</span><span class="en">Dept. Management</span></h4>
                     <div class="company">老挝万象 · TG CLUB</div>
-                    <p>初任舞台总监助手，后升任派对包厢DJ主管，负责DJ部门管理。2025年10月卸任后，现负责包厢DJ部门业绩整理与财务对接工作。</p>
+                    <p><span class="zh">初任舞台总监助手，后升任派对包厢DJ主管，负责DJ部门管理。2025年10月卸任后，现负责包厢DJ部门业绩整理与财务对接工作。</span><span class="en">Started as Stage Director's assistant, promoted to Party Room DJ Supervisor. Since October 2025, managing DJ department performance reports and finance coordination.</span></p>
                 </div>
             </div>
         </div>
@@ -887,69 +911,69 @@
 <!-- Skills Section -->
 <section id="skills">
     <div class="container">
-        <h2 class="section-title fade-in"><span class="gradient-text">专业技能</span></h2>
+        <h2 class="section-title fade-in"><span class="gradient-text"><span class="zh">专业技能</span><span class="en">Professional Skills</span></span></h2>
         <p class="section-subtitle fade-in">Skills</p>
         <div class="skills-grid">
             <div class="skill-card fade-in">
                 <div class="skill-icon">🎵</div>
-                <h4>电音DJ打碟</h4>
-                <p>精通EDM、House、Techno、Bounce等多种电音曲风，拥有丰富的现场演出经验。</p>
+                <h4><span class="zh">电音DJ打碟</span><span class="en">Electronic DJ</span></h4>
+                <p><span class="zh">精通EDM、House、Techno、Bounce等多种电音曲风，拥有丰富的现场演出经验。</span><span class="en">Proficient in EDM, House, Techno, Bounce and more. Rich live performance experience.</span></p>
                 <div class="skill-bar-container">
-                    <div class="skill-bar-label"><span>熟练度</span><span>95%</span></div>
+                    <div class="skill-bar-label"><span><span class="zh">熟练度</span><span class="en">Proficiency</span></span><span>95%</span></div>
                     <div class="skill-bar"><div class="skill-bar-fill" data-width="95"></div></div>
                 </div>
             </div>
             <div class="skill-card fade-in">
                 <div class="skill-icon">🎚️</div>
-                <h4>基础调音</h4>
-                <p>掌握DJ打碟中的基础调音技巧，包括EQ调节、音量平衡、过渡混音等核心操作。</p>
+                <h4><span class="zh">基础调音</span><span class="en">Basic Sound Mixing</span></h4>
+                <p><span class="zh">掌握DJ打碟中的基础调音技巧，包括EQ调节、音量平衡、过渡混音等核心操作。</span><span class="en">Core mixing skills including EQ adjustment, volume balancing, and transition blending.</span></p>
                 <div class="skill-bar-container">
-                    <div class="skill-bar-label"><span>熟练度</span><span>85%</span></div>
+                    <div class="skill-bar-label"><span><span class="zh">熟练度</span><span class="en">Proficiency</span></span><span>85%</span></div>
                     <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
                 </div>
             </div>
             <div class="skill-card fade-in">
                 <div class="skill-icon">🎛️</div>
-                <h4>简单音乐制作</h4>
-                <p>能够进行基础的电子音乐编曲与混音，打造原创或二次创作的电音作品。</p>
+                <h4><span class="zh">简单音乐制作</span><span class="en">Basic Music Production</span></h4>
+                <p><span class="zh">能够进行基础的电子音乐编曲与混音，打造原创或二次创作的电音作品。</span><span class="en">Basic electronic music arrangement and mixing for original or derivative works.</span></p>
                 <div class="skill-bar-container">
-                    <div class="skill-bar-label"><span>熟练度</span><span>70%</span></div>
+                    <div class="skill-bar-label"><span><span class="zh">熟练度</span><span class="en">Proficiency</span></span><span>70%</span></div>
                     <div class="skill-bar"><div class="skill-bar-fill" data-width="70"></div></div>
                 </div>
             </div>
             <div class="skill-card fade-in">
                 <div class="skill-icon">💡</div>
-                <h4>灯光操作（LJ）</h4>
-                <p>能够独立操作酒吧现场灯光系统，包括摇头灯、激光灯、氛围灯等设备的现场实时控制（注：仅限现场操作，不含后期编程）。</p>
+                <h4><span class="zh">灯光操作（LJ）</span><span class="en">Lighting Operation (LJ)</span></h4>
+                <p><span class="zh">能够独立操作酒吧现场灯光系统，包括摇头灯、激光灯、氛围灯等设备的现场实时控制（注：仅限现场操作，不含后期编程）。</span><span class="en">Live operation of club lighting systems including moving heads, lasers, and atmosphere lights (live operation only, not post-production programming).</span></p>
                 <div class="skill-bar-container">
-                    <div class="skill-bar-label"><span>熟练度</span><span>80%</span></div>
+                    <div class="skill-bar-label"><span><span class="zh">熟练度</span><span class="en">Proficiency</span></span><span>80%</span></div>
                     <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
                 </div>
             </div>
             <div class="skill-card fade-in">
                 <div class="skill-icon">🖥️</div>
-                <h4>屏幕素材播放（VJ）</h4>
-                <p>负责现场屏幕视觉素材的实时播放与控制，确保音乐与视觉效果同步呈现（注：仅限现场操作，不含后期编程）。</p>
+                <h4><span class="zh">屏幕素材播放（VJ）</span><span class="en">Visual Jockey (VJ)</span></h4>
+                <p><span class="zh">负责现场屏幕视觉素材的实时播放与控制，确保音乐与视觉效果同步呈现（注：仅限现场操作，不含后期编程）。</span><span class="en">Real-time playback and control of visual content on screens, synced with music (live operation only, not post-production programming).</span></p>
                 <div class="skill-bar-container">
-                    <div class="skill-bar-label"><span>熟练度</span><span>80%</span></div>
+                    <div class="skill-bar-label"><span><span class="zh">熟练度</span><span class="en">Proficiency</span></span><span>80%</span></div>
                     <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
                 </div>
             </div>
             <div class="skill-card fade-in">
                 <div class="skill-icon">✨</div>
-                <h4>独立制作声光电开场</h4>
-                <p>能够独立完成派对或演出的声光电开场秀，将灯光、音乐、屏幕视觉三者同步配合，打造震撼的开场效果。</p>
+                <h4><span class="zh">独立制作声光电开场</span><span class="en">SFX Opening Production</span></h4>
+                <p><span class="zh">能够独立完成派对或演出的声光电开场秀，将灯光、音乐、屏幕视觉三者同步配合，打造震撼的开场效果。</span><span class="en">Create stunning opening shows by synchronizing lighting, music, and visuals for parties and events.</span></p>
                 <div class="skill-bar-container">
-                    <div class="skill-bar-label"><span>熟练度</span><span>85%</span></div>
+                    <div class="skill-bar-label"><span><span class="zh">熟练度</span><span class="en">Proficiency</span></span><span>85%</span></div>
                     <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
                 </div>
             </div>
             <div class="skill-card fade-in">
                 <div class="skill-icon">🔧</div>
-                <h4>舞台设备维护与简单维修</h4>
-                <p>具备基础的舞台整体设备维护能力，能够进行简单的故障排查与维修处理。</p>
+                <h4><span class="zh">舞台设备维护与简单维修</span><span class="en">Stage Equipment Maintenance</span></h4>
+                <p><span class="zh">具备基础的舞台整体设备维护能力，能够进行简单的故障排查与维修处理。</span><span class="en">Basic stage equipment maintenance, troubleshooting and simple repairs.</span></p>
                 <div class="skill-bar-container">
-                    <div class="skill-bar-label"><span>熟练度</span><span>75%</span></div>
+                    <div class="skill-bar-label"><span><span class="zh">熟练度</span><span class="en">Proficiency</span></span><span>75%</span></div>
                     <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
                 </div>
             </div>
@@ -960,7 +984,7 @@
 <!-- Contact Section -->
 <section id="contact">
     <div class="container">
-        <h2 class="section-title fade-in"><span class="gradient-text">联系我</span></h2>
+        <h2 class="section-title fade-in"><span class="gradient-text"><span class="zh">联系我</span><span class="en">Contact Me</span></span></h2>
         <p class="section-subtitle fade-in">Get In Touch</p>
         <div class="contact-grid">
             <a href="https://x.com/MrAkA2002" target="_blank" rel="noopener noreferrer" class="contact-card fade-in">
@@ -989,10 +1013,21 @@
 
 <!-- Footer -->
 <footer>
-    <p>&copy; 2026 <span class="gradient-text">DJ AK</span> · 老挝万象TG CLUB</p>
+    <p>&copy; 2026 <span class="gradient-text">DJ AK</span> · <span class="zh">老挝万象TG CLUB</span><span class="en">TG CLUB Vientiane, Laos</span></p>
 </footer>
 
 <script>
+// ===== Language Toggle =====
+(function() {
+    var toggle = document.getElementById('langToggle');
+    var savedLang = localStorage.getItem('lang') || 'zh';
+    if (savedLang === 'en') document.body.classList.add('lang-en');
+    toggle.addEventListener('click', function() {
+        document.body.classList.toggle('lang-en');
+        localStorage.setItem('lang', document.body.classList.contains('lang-en') ? 'en' : 'zh');
+    });
+})();
+
 // ===== Particle Background =====
 (function() {
     var canvas = document.getElementById('particles');
