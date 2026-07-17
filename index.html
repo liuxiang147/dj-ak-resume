@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="DJ AK（DJ富贵）- 老挝万象TG CLUB | 资深电子音乐DJ | 职业简历">
+    <meta name="keywords" content="DJ AK, DJ富贵, TG CLUB, 老挝万象, 电子音乐, Vientiane, Laos">
+    <meta name="author" content="DJ AK">
+    <meta property="og:title" content="DJ AK - 老挝万象TG CLUB">
+    <meta property="og:description" content="DJ AK（DJ富贵）- 老挝万象TG CLUB，资深电子音乐人">
+    <meta property="og:type" content="profile">
+    <title>DJ AK | 老挝万象TG CLUB | 个人简历</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #00f0ff;
+            --primary-dark: #00b8c4;
+            --accent: #ff00e5;
+            --bg-dark: #0a0a0f;
+            --bg-card: #12121a;
+            --bg-card-hover: #1a1a25;
+            --text: #e0e0e0;
+            --text-muted: #888;
+            --gradient: linear-gradient(135deg, #00f0ff, #ff00e5);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ===== Particle Background ===== */
+        #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* ===== Navigation ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 10, 15, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(10, 10, 15, 0.98);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .nav-logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            font-weight: 900;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: var(--primary);
+            transition: all 0.3s;
+        }
+
+        /* ===== Hero Section ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 100px 20px 60px;
+            text-align: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 10px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero h1 .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle-cn {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--text-muted);
+            font-weight: 300;
+            margin-bottom: 5px;
+            animation: fadeInUp 0.8s ease 0.3s both;
+        }
+
+        .hero .subtitle-role {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            animation: fadeInUp 0.8s ease 0.5s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(0, 240, 255, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator div {
+            width: 24px;
+            height: 40px;
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .scroll-indicator div::before {
+            content: '';
+            width: 4px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 2px;
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scrollDown 1.5s infinite;
+        }
+
+        /* ===== Section Styles ===== */
+        section {
+            padding: 100px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .section-title .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 60px;
+            font-size: 1rem;
+        }
+
+        /* ===== About ===== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image .image-frame {
+            width: 100%;
+            aspect-ratio: 1;
+            background: var(--bg-card);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid rgba(0, 240, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+        }
+
+        .about-image .image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-image .image-frame .placeholder-icon {
+            opacity: 0.3;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .photo-gallery .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 240, 255, 0.15);
+            aspect-ratio: 3/4;
+        }
+
+        .photo-gallery .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .photo-gallery .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-text h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .about-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .about-info-item {
+            display: flex;
+            gap: 10px;
+        }
+
+        .about-info-item .label {
+            color: var(--primary);
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .about-info-item .value {
+            color: var(--text-muted);
+        }
+
+        /* ===== Experience ===== */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+            opacity: 0.3;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: calc(50% + 30px);
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: calc(50% + 30px);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 3px solid var(--bg-dark);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+            z-index: 1;
+        }
+
+        .timeline-content {
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 240, 255, 0.1);
+            border-radius: 16px;
+            padding: 25px;
+            max-width: 350px;
+            transition: all 0.3s;
+        }
+
+        .timeline-content:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(0, 240, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .timeline-date {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.8rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .timeline-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .timeline-content .company {
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* ===== Skills ===== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 240, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.3s;
+        }
+
+        .skill-card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(0, 240, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .skill-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .skill-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .skill-bar-container {
+            margin-top: 15px;
+        }
+
+        .skill-bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+        }
+
+        .skill-bar-label span:last-child {
+            color: var(--primary);
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(0, 240, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .skill-bar-fill {
+            height: 100%;
+            background: var(--gradient);
+            border-radius: 3px;
+            width: 0;
+            transition: width 1.5s ease;
+        }
+
+        /* ===== Contact ===== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 240, 255, 0.1);
+            border-radius: 16px;
+            padding: 35px 30px;
+            text-align: center;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: block;
+        }
+
+        .contact-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 240, 255, 0.1);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .contact-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(0, 240, 255, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
+        /* ===== Animations ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        @keyframes scrollDown {
+            0% { opacity: 1; top: 6px; }
+            100% { opacity: 0; top: 20px; }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 10, 15, 0.98);
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                padding-left: 50px;
+                padding-right: 0;
+                justify-content: flex-start;
+            }
+
+            .timeline-item::before,
+            .timeline-item:nth-child(even)::before {
+                left: 20px;
+            }
+
+            .timeline-content {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-info {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== Structured Data (JSON-LD) ===== */
+        .structured-data {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "DJ AK",
+    "alternateName": "DJ富贵",
+    "jobTitle": "DJ / 部门管理",
+    "worksFor": {
+        "@type": "Organization",
+        "name": "TG CLUB",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "万象",
+            "addressCountry": "老挝"
+        }
+    },
+    "sameAs": [
+        "https://x.com/MrAkA2002"
+    ],
+    "knowsAbout": ["DJ", "电子音乐", "音乐制作", "现场打碟"]
+}
+</script>
+
+<!-- Particle Background -->
+<canvas id="particles"></canvas>
+
+<!-- Navigation -->
+<nav id="navbar">
+    <div class="nav-container">
+        <a href="#hero" class="nav-logo">DJ AK</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">关于</a></li>
+            <li><a href="#experience">经历</a></li>
+            <li><a href="#skills">技能</a></li>
+            <li><a href="#contact">联系</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger" aria-label="菜单" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+    <div class="hero-content">
+        <div class="hero-badge">老挝万象 · TG CLUB</div>
+        <h1><span class="gradient-text">DJ AK</span></h1>
+        <div class="subtitle-cn">DJ富贵</div>
+        <div class="subtitle-role">TG CLUB · DJ / 部门管理</div>
+        <p>2018年云南出道，深耕电子音乐领域8年。从营销新人到DJ主管，凭借热爱与天赋一路成长。现负责老挝万象TG CLUB部门业绩整理与财务对接工作。</p>
+        <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">联系我</a>
+            <a href="https://x.com/MrAkA2002" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Twitter / X</a>
+            <a href="https://wa.me/8562092669039" target="_blank" rel="noopener noreferrer" class="btn btn-outline">WhatsApp</a>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <div></div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <div class="container">
+        <h2 class="section-title fade-in"><span class="gradient-text">关于我</span></h2>
+        <p class="section-subtitle fade-in">About Me</p>
+        <div class="about-grid">
+            <div class="about-image fade-in">
+                <div class="image-frame">
+                    <img src="images/photo1.jpg" alt="DJ AK" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'placeholder-icon\'>🎧</span>'">
+                </div>
+                <div class="photo-gallery">
+                    <div class="gallery-item">
+                        <img src="images/photo1.jpg" alt="DJ AK - 黑发造型" onerror="this.parentElement.style.display='none'">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/photo2.jpg" alt="DJ AK - 金发造型" onerror="this.parentElement.style.display='none'">
+                    </div>
+                </div>
+            </div>
+            <div class="about-text fade-in">
+                <h3>DJ AK（DJ富贵）</h3>
+                <p>2018年于云南出道，中国夜场行业正处于巅峰转向下行的转折期。凭借对电子音乐的热爱与极强的学习能力，他从一名营销岗位的新人逐步成长为独当一面的DJ。因其涉猎广泛、技能全面，曾被同事称为"万能小王子"。</p>
+                <p>现任职于老挝万象TG CLUB，负责部门业绩整理与财务对接工作。TG CLUB是老挝万象最具代表性的电音娱乐场所之一，以5D全屏科技和顶级音响设备著称。</p>
+                <div class="about-info">
+                    <div class="about-info-item">
+                        <span class="label">姓名：</span>
+                        <span class="value">DJ AK（DJ富贵）</span>
+                    </div>
+                    <div class="about-info-item">
+                        <span class="label">职位：</span>
+                        <span class="value">DJ / 部门管理</span>
+                    </div>
+                    <div class="about-info-item">
+                        <span class="label">所在地：</span>
+                        <span class="value">老挝万象</span>
+                    </div>
+                    <div class="about-info-item">
+                        <span class="label">机构：</span>
+                        <span class="value">TG CLUB</span>
+                    </div>
+                    <div class="about-info-item">
+                        <span class="label">出道：</span>
+                        <span class="value">2018年 · 云南</span>
+                    </div>
+                    <div class="about-info-item">
+                        <span class="label">经验：</span>
+                        <span class="value">8年+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience">
+    <div class="container">
+        <h2 class="section-title fade-in"><span class="gradient-text">工作经历</span></h2>
+        <p class="section-subtitle fade-in">Experience</p>
+        <div class="timeline">
+            <!-- 2017-2018 起步 -->
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <div class="timeline-date">2017 — 2018</div>
+                    <h4>DJ学徒</h4>
+                    <div class="company">云南昭通 · Space Club</div>
+                    <p>初入行业，从营销岗位起步。机缘巧合接触DJ职业后拜师学艺，跟随现场DJ系统学习半年，正式出道。凭借对电子音乐的理解力与天赋，迅速成长。</p>
+                </div>
+            </div>
+            <!-- 2020 江苏 -->
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <div class="timeline-date">2020</div>
+                    <h4>DJ</h4>
+                    <div class="company">江苏常熟 · ET CLUB</div>
+                    <p>赴江苏就职，因经营方问题导致店铺关闭，正常离职。</p>
+                </div>
+            </div>
+            <!-- 2021-2024 福州 -->
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <div class="timeline-date">2021 — 2024</div>
+                    <h4>DJ</h4>
+                    <div class="company">福州长乐 · Spades</div>
+                    <p>职业生涯中最重要的阶段。来来回回三次，见证了店铺三次更名。期间曾短暂赴浙江宁波慈溪杭州湾担任筹备店音乐主管（2022），以及广西贺州V8就职半年（2023），最终均回归Spades。后因老板经营原因关门，正常离职。</p>
+                </div>
+            </div>
+            <!-- 2024至今 TG CLUB -->
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <div class="timeline-date">2024.10 — 至今</div>
+                    <h4>DJ / 部门管理</h4>
+                    <div class="company">老挝万象 · TG CLUB</div>
+                    <p>初任舞台总监助手，后升任派对包厢DJ主管，负责DJ部门管理。2025年10月卸任后，现负责部门每期业绩整理及与财务对接部门工资等工作。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <div class="container">
+        <h2 class="section-title fade-in"><span class="gradient-text">专业技能</span></h2>
+        <p class="section-subtitle fade-in">Skills</p>
+        <div class="skills-grid">
+            <div class="skill-card fade-in">
+                <div class="skill-icon">🎵</div>
+                <h4>电音DJ打碟</h4>
+                <p>精通EDM、House、Techno、Bounce等多种电音曲风，拥有丰富的现场演出经验。</p>
+                <div class="skill-bar-container">
+                    <div class="skill-bar-label"><span>熟练度</span><span>95%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="95"></div></div>
+                </div>
+            </div>
+            <div class="skill-card fade-in">
+                <div class="skill-icon">🎚️</div>
+                <h4>基础调音</h4>
+                <p>掌握DJ打碟中的基础调音技巧，包括EQ调节、音量平衡、过渡混音等核心操作。</p>
+                <div class="skill-bar-container">
+                    <div class="skill-bar-label"><span>熟练度</span><span>85%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+                </div>
+            </div>
+            <div class="skill-card fade-in">
+                <div class="skill-icon">🎛️</div>
+                <h4>简单音乐制作</h4>
+                <p>能够进行基础的电子音乐编曲与混音，打造原创或二次创作的电音作品。</p>
+                <div class="skill-bar-container">
+                    <div class="skill-bar-label"><span>熟练度</span><span>70%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="70"></div></div>
+                </div>
+            </div>
+            <div class="skill-card fade-in">
+                <div class="skill-icon">💡</div>
+                <h4>灯光操作（LJ）</h4>
+                <p>能够独立操作酒吧现场灯光系统，包括摇头灯、激光灯、氛围灯等设备的现场实时控制（注：仅限现场操作，不含后期编程）。</p>
+                <div class="skill-bar-container">
+                    <div class="skill-bar-label"><span>熟练度</span><span>80%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+                </div>
+            </div>
+            <div class="skill-card fade-in">
+                <div class="skill-icon">🖥️</div>
+                <h4>屏幕素材播放（VJ）</h4>
+                <p>负责现场屏幕视觉素材的实时播放与控制，确保音乐与视觉效果同步呈现（注：仅限现场操作，不含后期编程）。</p>
+                <div class="skill-bar-container">
+                    <div class="skill-bar-label"><span>熟练度</span><span>80%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+                </div>
+            </div>
+            <div class="skill-card fade-in">
+                <div class="skill-icon">✨</div>
+                <h4>独立制作声光电开场</h4>
+                <p>能够独立完成派对或演出的声光电开场秀，将灯光、音乐、屏幕视觉三者同步配合，打造震撼的开场效果。</p>
+                <div class="skill-bar-container">
+                    <div class="skill-bar-label"><span>熟练度</span><span>85%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+                </div>
+            </div>
+            <div class="skill-card fade-in">
+                <div class="skill-icon">🔧</div>
+                <h4>舞台设备维护与简单维修</h4>
+                <p>具备基础的舞台整体设备维护能力，能够进行简单的故障排查与维修处理。</p>
+                <div class="skill-bar-container">
+                    <div class="skill-bar-label"><span>熟练度</span><span>75%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title fade-in"><span class="gradient-text">联系我</span></h2>
+        <p class="section-subtitle fade-in">Get In Touch</p>
+        <div class="contact-grid">
+            <a href="https://x.com/MrAkA2002" target="_blank" rel="noopener noreferrer" class="contact-card fade-in">
+                <div class="contact-icon">𝕏</div>
+                <h4>Twitter / X</h4>
+                <p>@MrAkA2002</p>
+            </a>
+            <a href="https://t.me/Mr_AK2002" target="_blank" rel="noopener noreferrer" class="contact-card fade-in">
+                <div class="contact-icon">✈️</div>
+                <h4>Telegram</h4>
+                <p>@Mr_AK2002</p>
+            </a>
+            <a href="https://wa.me/8562092669039" target="_blank" rel="noopener noreferrer" class="contact-card fade-in">
+                <div class="contact-icon">💬</div>
+                <h4>WhatsApp</h4>
+                <p>+856 209 266 9039</p>
+            </a>
+            <a href="weixin:// DJ-AK2002" class="contact-card fade-in">
+                <div class="contact-icon">💚</div>
+                <h4>微信</h4>
+                <p>DJ-AK2002</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 <span class="gradient-text">DJ AK</span> · 老挝万象TG CLUB</p>
+</footer>
+
+<script>
+// ===== Particle Background =====
+(function() {
+    var canvas = document.getElementById('particles');
+    var ctx = canvas.getContext('2d');
+    var particles = [];
+    var particleCount = 80;
+
+    function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    function Particle() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 0.5;
+        this.vy = (Math.random() - 0.5) * 0.5;
+        this.size = Math.random() * 2 + 0.5;
+        this.alpha = Math.random() * 0.5 + 0.1;
+    }
+
+    for (var i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (var i = 0; i < particles.length; i++) {
+            var p = particles[i];
+            p.x += p.vx;
+            p.y += p.vy;
+            if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+            if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(0, 240, 255, ' + p.alpha + ')';
+            ctx.fill();
+            for (var j = i + 1; j < particles.length; j++) {
+                var p2 = particles[j];
+                var dx = p.x - p2.x;
+                var dy = p.y - p2.y;
+                var dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 120) {
+                    ctx.beginPath();
+                    ctx.moveTo(p.x, p.y);
+                    ctx.lineTo(p2.x, p2.y);
+                    ctx.strokeStyle = 'rgba(0, 240, 255, ' + (0.1 * (1 - dist / 120)) + ')';
+                    ctx.lineWidth = 0.5;
+                    ctx.stroke();
+                }
+            }
+        }
+        requestAnimationFrame(draw);
+    }
+    draw();
+})();
+
+// ===== Mobile Navigation =====
+(function() {
+    var hamburger = document.getElementById('hamburger');
+    var navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+    // Also handle keyboard
+    hamburger.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            navLinks.classList.toggle('active');
+        }
+    });
+    // Close menu on link click
+    var links = navLinks.querySelectorAll('a');
+    for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function() {
+            navLinks.classList.remove('active');
+        });
+    }
+})();
+
+// ===== Navbar scroll effect =====
+(function() {
+    var navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+})();
+
+// ===== Scroll Animations =====
+(function() {
+    var fadeElements = document.querySelectorAll('.fade-in');
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(function(el) {
+        observer.observe(el);
+    });
+})();
+
+// ===== Skill Bars Animation =====
+(function() {
+    var skillBars = document.querySelectorAll('.skill-bar-fill');
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                var width = entry.target.getAttribute('data-width');
+                entry.target.style.width = width + '%';
+            }
+        });
+    }, { threshold: 0.5 });
+
+    skillBars.forEach(function(bar) {
+        observer.observe(bar);
+    });
+})();
+</script>
+</body>
+</html>
